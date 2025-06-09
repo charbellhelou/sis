@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login Form validation in HTML & CSS | CodingNepal</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>enter the student you want to add</header>
+        <form action="/login" method="post" id="loginForm">
+
+            <div class="std name">
+                <div class="input-area">
+                    <input id="firstname" type="text" placeholder="first name" class="input">
+
+                </div>
+
+            </div>
+            <div class="stdln">
+                <div class="input-area">
+                    <input id="lastname" type="text" placeholder="lastname" class="input">
+
+                </div>
+
+            </div>
+            <div class="email">
+                <div class="input-area">
+                    <input id="email" type="text" placeholder="lastname" class="input">
+
+                </div>
+
+            </div>
+            <div class="description">
+                <div class="input-area">
+                    <input id="description" type="text" class="input" placeholder="description">
+
+                </div>
+
+            </div>
+
+            <button id="btn-login" type="submit" onclick="courseaddition()">Add Course</button>
+        </form>
+    </div>
+
+    <script src="../scripts/scripts.js"></script>
+
+</body>
+
+</html>
+<script>
+
+
+            async function courseaddition() {
+
+            const baseURL = "http://localhost:1337/";
+
+            var baseURladd = baseURL + "additionofcourse";
+            const courseName = document.getElementById('course_name').value;
+            const credits = document.getElementById('credits').value;
+            const description = document.getElementById('description').value;
+            const res = await fetch(baseURladd, {
+                method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                courseName: courseName,
+                credits: credits,
+                description: description,
+            }),
+        });
+
+            const result = await res.json();
+
+            if (result.status === 200) {
+                alert("Course has been added");
+            window.location.href = "http://localhost:1337/admin";
+        } else {
+                alert("Course was not added");
+            // Consider handling this scenario differently as per your requirements
+        }
+    };
+</script>
+
+

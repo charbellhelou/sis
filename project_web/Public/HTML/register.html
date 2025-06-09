@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Registration or Sign Up form in HTML CSS | CodingLab </title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap">
+    <link rel="stylesheet" href="styles/register.css">
+
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="wrapper">
+        <h2>Registration</h2>
+        <form action="/register" method="post" id="regForm">
+
+            <div class="input-box">
+                <input type="text" id="fn" placeholder=" firstname" required>
+            </div>
+            <div class="input-box">
+                <input type="text" id="ln" placeholder="lastname" required>
+            </div>
+            <div class="input-box">
+                <input type="text" id="mail" placeholder="email" required>
+            </div>
+            <div class="input-box">
+                <input type="password" id="pass" placeholder="password" required>
+            </div>
+            <div class="input-box">
+                <input type="text" id="rol" placeholder="type" required>
+            </div>
+
+            <div class="input-box button">
+                <button id="register_btn" type="submit">Register</button>
+            </div>
+        </form>
+    </div>
+    <script src="../scripts/register.js"></script>
+    
+
+</body>
+
+</html>
+
+            

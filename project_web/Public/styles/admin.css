@@ -1,0 +1,96 @@
+
+body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #5372F0; /* Change the background color to blue */
+}
+
+header {
+    width: 100%;
+    background-color: #333;
+    padding: 17px 0; /* Decrease the top and bottom padding */
+    text-align: center;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    font-family: "Poppins", sans-serif;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px; /* Increase the font size */
+    font-weight: bold;
+    transition: color 0.3s ease;
+    font-family: "Poppins", sans-serif;
+}
+
+    nav a:hover {
+        color: #3498db;
+    }
+
+
+.box {
+    width: 200px;
+    height: 200px;
+    border: 2px solid #3498db;
+    margin: 10px;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #fff; /* Change box background color to white */
+    color: #5372F0; /* Change text color to blue */
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Add transition for a smooth effect */
+}
+
+    .box:hover {
+        background-color: #5372F0; /* Change the background color on hover to blue */
+        color: #fff !important; /* Change text color on hover to white with !important to override other styles */
+        border-color: #fff; /* Change border color on hover to white */
+    }
+
+
+
+
+.box-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+@media screen and (max-width: 768px) {
+    nav li {
+        margin-right: 10px;
+    }
+    header {
+        padding: 5px;
+    }
+    .box {
+        width: 80px;
+        height: 80px;
+        /* Change to row for horizontal arrangement on smaller screens */
+        font-size: 12px;
+        margin: 5px;
+    }
+  
+
+}
+   

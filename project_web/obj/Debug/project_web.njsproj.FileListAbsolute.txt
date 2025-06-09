@@ -1,0 +1,18 @@
+C:\Users\xxcfr\source\repos\project_web\project_web\obj\Debug\project_web.njsproj.AssemblyReference.cache
+C:\Users\xxcfr\source\repos\project_web\project_web\obj\Debug\project_web.njsproj.CoreCompileInputs.cache
+C:\Users\xxcfr\source\repos\project_web\project_web\bin\Microsoft.NodejsTools.WebRole.dll
+C:\Users\96171\Pictures\zaza\project_web\project_web\obj\Debug\project_web.njsproj.AssemblyReference.cache
+C:\Users\96171\Pictures\zaza\project_web\project_web\obj\Debug\project_web.njsproj.CoreCompileInputs.cache
+C:\Users\96171\Pictures\zaza\project_web\project_web\bin\Microsoft.NodejsTools.WebRole.dll
+C:\Users\xxcfr\Desktop\charebl\project_web\project_web\obj\Debug\project_web.njsproj.AssemblyReference.cache
+C:\Users\xxcfr\Desktop\charebl\project_web\project_web\obj\Debug\project_web.njsproj.CoreCompileInputs.cache
+C:\Users\xxcfr\Desktop\charebl\project_web\project_web\bin\Microsoft.NodejsTools.WebRole.dll
+C:\Users\96171\Pictures\ekher wahad er b2emo\project_web\project_web\obj\Debug\project_web.njsproj.AssemblyReference.cache
+C:\Users\96171\Pictures\ekher wahad er b2emo\project_web\project_web\obj\Debug\project_web.njsproj.CoreCompileInputs.cache
+C:\Users\96171\Pictures\ekher wahad er b2emo\project_web\project_web\bin\Microsoft.NodejsTools.WebRole.dll
+C:\Users\96171\Pictures\prrrrrrrrrrrrrrrrrrrroject_web\project_web\project_web\obj\Debug\project_web.njsproj.AssemblyReference.cache
+C:\Users\96171\Pictures\prrrrrrrrrrrrrrrrrrrroject_web\project_web\project_web\obj\Debug\project_web.njsproj.CoreCompileInputs.cache
+C:\Users\96171\Pictures\prrrrrrrrrrrrrrrrrrrroject_web\project_web\project_web\bin\Microsoft.NodejsTools.WebRole.dll
+C:\Users\xxcfr\Desktop\web prog\project_web\project_web\obj\Debug\project_web.njsproj.AssemblyReference.cache
+C:\Users\xxcfr\Desktop\web prog\project_web\project_web\obj\Debug\project_web.njsproj.CoreCompileInputs.cache
+C:\Users\xxcfr\Desktop\web prog\project_web\project_web\bin\Microsoft.NodejsTools.WebRole.dll

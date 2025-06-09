@@ -1,0 +1,122 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.movie-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.course-list {
+    max-width: 800px;
+    margin: 50px auto; /* Adjust the margin to center the course list */
+}
+
+h1 {
+    color: #333;
+    display: block;
+    margin-top: 80px; /* Add margin-top to lower the position */
+    margin-bottom: 20px; /* Add margin-bottom to provide additional space */
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+h2 {
+    color: #007bff;
+}
+
+p {
+    margin: 10px 0;
+}
+
+.add-to-wishlist-btn {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+header {
+    width: 100%;
+    background-color: #333;
+    padding: 10px 0; /* Decrease the top and bottom padding */
+    text-align: center;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    font-family: "Poppins", sans-serif;
+}
+
+nav {
+    width: 100%; /* Set the width to 100% */
+    background-color: #333; /* Set the background color */
+    padding: 0px 0; /* Decrease the top and bottom padding */
+    text-align: center;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    font-family: "Poppins", sans-serif;
+}
+
+    nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    nav li {
+        margin: 0 15px;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 18px; /* Increase the font size */
+        font-weight: bold;
+        transition: color 0.3s ease;
+        font-family: "Poppins", sans-serif;
+    }
+
+        nav a:hover {
+            color: #3498db;
+        }
+
+
+.add-to-wishlist-btn:hover {
+    background-color: #007bff;
+}
+
+
+@media only screen and (max-width: 600px) {
+    nav li {
+        margin: 0 0px; /* Adjust margin to decrease spacing between items */
+    }
+}

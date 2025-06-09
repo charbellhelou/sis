@@ -1,0 +1,136 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>project_web</Name>
+    <RootNamespace>project_web</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>2fe73960-1b32-400c-85be-aa8111161cbe</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>server.js</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <NodejsPort>1337</NodejsPort>
+    <StartWebBrowser>true</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="Controllers\courseController.js" />
+    <Content Include="Controllers\userController.js" />
+    <Content Include="DBconnection.js" />
+    <Content Include="Models\UserDTO.js" />
+    <Content Include="Public\HTML\login.html" />
+    <Content Include="Public\HTML\register.html" />
+    <Content Include="Public\scripts\admin.js" />
+    <Content Include="Public\scripts\changegrade.js" />
+    <Content Include="Public\scripts\courseadd.js" />
+    <Content Include="Public\scripts\coursedrop.js" />
+    <Content Include="Public\scripts\coursedropadmin.js" />
+    <Content Include="Public\scripts\newdropcoursesadmin.js" />
+    <Content Include="Public\scripts\register.js" />
+    <Content Include="Public\scripts\scripts.js" />
+    <Content Include="Public\scripts\showenrolledcourses.js" />
+    <Content Include="Public\scripts\student.js" />
+    <Content Include="Public\scripts\studentaddpage.js" />
+    <Content Include="Public\styles\admin.css" />
+    <Content Include="Public\styles\changegrade.css" />
+    <Content Include="Public\styles\courseadd.css" />
+    <Content Include="Public\styles\dropcourse.css" />
+    <Content Include="Public\styles\dropcoursesadmin.css" />
+    <Content Include="Public\styles\newdropcoursesadmin.css" />
+    <Content Include="Public\styles\register.css" />
+    <Content Include="Public\styles\showcourses.css" />
+    <Content Include="Public\styles\showenrolledcourses.css" />
+    <Content Include="Public\styles\student.css" />
+    <Content Include="Public\styles\student.js" />
+    <Content Include="Public\styles\studenthomepage.css" />
+    <Content Include="Public\styles\styles.css" />
+    <Content Include="Repository\courseRepository.js" />
+    <Content Include="Repository\userRepo.js" />
+    <Content Include="server.js" />
+    <Content Include="package.json" />
+    <Content Include="README.md" />
+    <Content Include="Services\middleware.js" />
+    <Content Include="Services\courseService.js" />
+    <Content Include="Services\userService.js" />
+    <Content Include="views\admin.ejs" />
+    <Content Include="views\changegrade.ejs" />
+    <Content Include="views\courseaddpage.ejs" />
+    <Content Include="views\coursedrop.ejs" />
+    <Content Include="views\coursedropadmin.ejs" />
+    <Content Include="views\homepage.ejs" />
+    <Content Include="views\courseadd.ejs">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\login.ejs" />
+    <Content Include="views\newdropcourseadmin.ejs" />
+    <Content Include="views\register.ejs" />
+    <Content Include="views\showcourses.ejs" />
+    <Content Include="views\showenrolledcourses.ejs" />
+    <Content Include="views\stdaddpage.ejs" />
+    <Content Include="views\student.ejs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="Models\" />
+    <Folder Include="Public\" />
+    <Folder Include="Public\HTML\" />
+    <Folder Include="Public\scripts\" />
+    <Folder Include="Public\styles\" />
+    <Folder Include="Repository\" />
+    <Folder Include="Services\" />
+    <Folder Include="views\" />
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

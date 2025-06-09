@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/showcourses.css">
+    <title>List of Movies</title>
+
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/student">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="course-list">
+        <h1>Courses Grades</h1>
+        <ul>
+            <% if (Array.isArray(courses)) { %>
+            <% courses.forEach(course => { %>
+            <li>
+                <p><strong>Course Name: </strong> <%= course.course_name %></p>
+                <p><strong>Course Grade: </strong> <%= course. grade %> </p>
+
+
+            </li>
+            <% }); %>
+            <% } else { %>
+            <h>No courses available</h>
+            <% } %>
+        </ul>
+    </div>
+
+
+
+    <script>
+
+
+    </script>
+</body>
+</html>

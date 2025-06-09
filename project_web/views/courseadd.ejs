@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List of Movies</title>
+    <link rel="stylesheet" href="../styles/courseadd.css">
+</head>
+<body>
+    <header>
+    <nav>
+        <ul>
+            <li><a href="/student">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+    <div class="course-list">
+        <h1>List of available Courses</h1>
+        <ul>
+            <% if (Array.isArray(courses)) { %>
+            <% courses.forEach(course => { %>
+            <li>
+                <h2><%= course.name %></h2>
+                <p><strong>id:</strong> <%= course.id %></p>
+                <p><strong>credits</strong> <%= course.credits %></p>
+                <p><strong>description</strong> <%= course.description %></p>
+                <button class="add-to-wishlist-btn" onclick="addcourse('<%= course.id %>')">add this course</button>
+
+
+            </li>
+            <% }); %>
+            <% } else { %>
+            <h>No courses available</h>
+            <% } %>
+        </ul>
+    </div>
+   
+
+
+    <script src="../scripts/courseadd.js"></script>
+</body>
+</html>

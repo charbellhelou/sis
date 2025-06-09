@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List of Movies</title>
+    <link rel="stylesheet" href="styles/dropcourse.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/student">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="course-list">
+        <h1>List of available Courses</h1>
+        <ul>
+            <% if (Array.isArray(courses)) { %>
+            <% courses.forEach(course => { %>
+            <li>
+                <h2><%= course.course_name %></h2>
+
+                <button class="drop" onclick="dropcourse('<%= course.id %>')">drop this course</button>
+
+
+            </li>
+            <% }); %>
+            <% } else { %>
+            <h>No courses available</h>
+            <% } %>
+        </ul>
+    </div>
+
+
+
+    <script src="../scripts/coursedrop.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List of Movies</title>
+    <link rel="stylesheet" href="styles/changegrade.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/admin">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="course-list">
+        <h1>List of all old  courses </h1>
+        <ul>
+            <% if (Array.isArray(courses)) { %>
+            <% courses.forEach(course => { %>
+            <li>
+                <p><strong>Course Name:</strong> <%= course.course_name %></p>
+                <p><strong>Student ID:</strong> <%= course.studentid %></p>
+                <p><strong>Course grade:</strong> <%= course.grade %></p>
+                <input id="newgrade_<%= course.studentid %>_<%= course.courseid %>" type="text" placeholder="New Grade" class="input">
+                <button class="update-grade-btn" onclick="updateGrade('<%= course.studentid %>','<%= course.courseid %>')">Update Grade</button>
+            </li>
+            <% }); %>
+            <% } else { %>
+            <h>No courses available</h>
+            <% } %>
+        </ul>
+    </div>
+
+
+
+
+    <script src="../scripts/changegrade.js"></script>
+</body>
+
+</html>

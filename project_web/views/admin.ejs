@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/admin.css">
+    <title>Clickable Boxes</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <a href="#" class="box-link">
+        <div class="box" id="myDiv" onclick="addnewstd()">
+            <h2>Add New Student</h2>
+        </div>
+    </a>
+    <a href="#" class="box-link">
+
+        <div class="box" id="myDiv" onclick="addnewcourse()">
+
+            <h2>Add  course</h2>
+        </div>
+    </a>
+    <a href="#" class="box-link">
+        <div class="box" id="myDiv" onclick="dropadmin()">
+            <h2>Drop Courses</h2>
+        </div>
+    </a>
+    <a href="#" class="box-link">
+        <div class="box" id="myDiv" onclick="changegrade()">
+            <h2>change grade</h2>
+        </div>
+    </a>
+    <script src="../scripts/admin.js"></script>
+</body>
+</html>
+

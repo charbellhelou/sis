@@ -1,0 +1,21 @@
+{
+  "name": "project_web",
+  "version": "0.0.0",
+  "description": "project_web",
+  "main": "server.js",
+  "author": {
+    "name": ""
+  },
+  "devDependencies": {
+    "eslint": "^8.21.0"
+  },
+  "eslintConfig": {},
+  "dependencies": {
+    "ajax": "^0.0.4",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "jquery": "^3.7.1",
+    "mysql2": "^3.6.5"
+  }
+}

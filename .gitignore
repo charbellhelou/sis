@@ -1,0 +1,23 @@
+# Node modules (if you're using Node.js)
+node_modules/
+
+# VS Code settings
+.vscode/
+
+# Visual Studio settings
+.vs/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# OS files
+*.swp
+*.swo
+
+# Build output
+dist/
+build/

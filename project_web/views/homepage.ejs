@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List of Movies</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+           background-color: #f2f2f2;
+            color: #333;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .movie-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #007bff;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        .add-to-wishlist-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+            .add-to-wishlist-btn:hover {
+                background-color: #45a049;
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome <%= user.firstname %></h1>
+        <p>Thank you for visiting our website! <%= user.userlastname %></p>
+    </div>
+    <div class="movie-list">
+        <h1>List of enrolled Courses</h1>
+        <ul>
+            <% courses.forEach(course => { %>
+            <li>
+
+                <h2><%= course.name %></h2>
+                <p><strong>id:</strong> <%= course.id %></p>
+                <p><strong>credits:</strong> <%= course.credits %></p>
+                <p><strong>Description:</strong> <%= course.description %></p>
+
+
+            </li>
+            <% }); %>
+        </ul>
+    </div>
+    <div class="movie-list">
+        <h1>List of Courses</h1>
+        <ul>
+            <% courses.forEach(course => { %>
+            <li>
+
+                <h2><%= course.name %></h2>
+                <p><strong>id:</strong> <%= course.id %></p>
+                <p><strong>credits:</strong> <%= course.credits %></p>
+                <p><strong>Description:</strong> <%= course.description %></p>
+
+
+            </li>
+            <% }); %>
+        </ul>
+    </div>
+
+
+    <script>
+
+        async function addToWishlist(movieID, movieName) {
+
+            console.log(movieID);
+
+            const baseURL = "http://localhost:1337/";
+
+            var baseURlPost = baseURL + "addToWishlist";
+            const res = await fetch(baseURlPost, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    ID: movieID
+                }),
+            });
+
+            const result = await res.json();
+
+            if (result.status === 200) {
+
+                alert("Added to Wishlist: Movie ID " + movieID + " - " + movieName);
+
+            } else
+                alert("Movie Already in Wishlist");
+
+
+
+
+        }
+    </script>
+</body>
+</html>
